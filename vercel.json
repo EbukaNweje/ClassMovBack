@@ -1,5 +1,5 @@
 {
-    "name": "MyMov",
+    "name": "class-mov-back",
     "builds": [
       {
         "src": "server.js",
