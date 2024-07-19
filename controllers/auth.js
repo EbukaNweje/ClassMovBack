@@ -38,7 +38,7 @@ exports.register = async (req, res, next)=>{
          res.status(201).json({
             message: "User has been created.",
             data: newUser
-        })
+        }) 
         }
       })
       
