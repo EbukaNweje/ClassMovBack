@@ -1,5 +1,5 @@
 {
-    "name": "class-mov-back",
+    "name": "classmovback",
     "builds": [
       {
         "src": "server.js",
