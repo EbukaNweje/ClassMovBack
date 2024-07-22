@@ -28,7 +28,7 @@ exports.register = async (req, res, next)=>{
          const newUser = new User({
             password:hash,
             email: req.body.email,
-            userName:req.body.userName,
+            userName: req.body.userName,
          })
          const token = jwt.sign({id:newUser._id, isAdmin:newUser.isAdmin}, process.env.JWT, {expiresIn: "15m"})
          newUser.token = token
@@ -52,7 +52,6 @@ exports.tradingSession = async (req, res, next) => {
     const id = req.params.id;
     const userInfo = await User.findById(id);
     console.log(userInfo)
-      // const sessionEmail = User.findOne(({ email: req.body.email }))
       if(userInfo.accountBalance > 0){
         let newDay = userInfo.newDay
         const setter = setInterval(() => {
